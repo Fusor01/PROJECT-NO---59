@@ -22,3 +22,11 @@ typedef struct
     int status;
 
 } claim;
+
+int GENreport();
+void addpolicy();
+void addclaim();
+int validate_Claims();
+int viewclaims(void);
+int viewpolicy(void);
+void clear();
