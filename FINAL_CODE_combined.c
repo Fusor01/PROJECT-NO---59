@@ -257,7 +257,7 @@ int validate_Claims()
     if (polyredfile == NULL)
     {
         printf("Error opening file");
-        return 1;
+        
     }
 
     char line[256];
@@ -290,15 +290,15 @@ int validate_Claims()
         return 1;
     }
 
-    char line2[256];
+   
     claim claims[100]; // array to hold up to 100 claims
     int cc = 0;
 
-    while (fgets(line, sizeof(line2), fp))
+    while (fgets(line, sizeof(line), fp))
     {
-        line2[strcspn(line2, "\n")] = '\0'; // remove newline
+        line[strcspn(line, "\n")] = '\0'; // remove newline
 
-        char *token = strtok(line2, ",");
+        char *token = strtok(line, ",");
         claims[cc].claim_id = atoi(token);
 
         token = strtok(NULL, ",");
@@ -347,8 +347,8 @@ int validate_Claims()
     }
     fclose(cf);
     fclose(polyredfile);
-    printf(" CLAIMS VALLIDATED AND VERIFIED SUCCESSFULLY");
-    return 0;
+    printf(" CLAIMS VALLIDATED AND VERIFIED SUCCESSFULLY\n");
+    
 }
 
 // REPORT FUNCTION
