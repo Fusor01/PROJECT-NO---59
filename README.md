@@ -43,7 +43,7 @@ PROJECT-NO---59/
 Because the file name has brackets and underscores, use quotes while compiling:
 
 ```bash
-gcc "FINAL_CODE_(combined).c" -o finalcode
+gcc "FINAL_CODE_(combined).c" -o finalexe
 ./finalcode
 ```
 
@@ -64,7 +64,7 @@ Menu Options in Program:
 
 1. **Compile the program** using the command above.
 
-2. **Run the program** with `./finalcode`.
+2. **Run the program** with `./finalexe`.
 
 3. **Main Menu** will appear with options from 1 to 8.
 
