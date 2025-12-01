@@ -346,7 +346,6 @@ int validate_Claims()
                 claims[i].status);
     }
     fclose(cf);
-    fclose(polyredfile);
     printf(" CLAIMS VALLIDATED AND VERIFIED SUCCESSFULLY\n");
     
 }
